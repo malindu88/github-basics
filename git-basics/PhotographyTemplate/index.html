@@ -1,0 +1,249 @@
+<!doctype html>
+<html><head>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+<!--
+http://ajarproductions.com/pages/products/in5/answers/245/scroll-horizontally-mouse-wheel-support-jquery-mouse-wheel
+http://demosthenes.info/blog/532/Convert-Images-To-Black-And-White-With-CSS
+C:\Users\Malindu\AppData\Local\Google\Chrome\Application>chrome.exe --disable-web-security
+-->
+
+<title>Title Photography</title>
+
+</head>
+
+<body>
+<div id="image-scroller">
+    <ul>
+		<li><img src="images/wedding/26.jpg" title="Automatically generated caption"></li>
+		<li><img src="images/wedding/cubagallery-img-20.jpg" title="Automatically generated caption"></li>
+		<li><img src="images/wedding/Romesh Sugathapala Wedding_paparasinewslanka (5).jpg" title="Automatically generated caption"></li>
+	</ul>
+</div>
+
+<aside id="left-content">
+	<header>
+    	<h1 id="title">Title Photography</h1>
+    </header>
+    <ul id="main-menu">
+    	<li><a class="selected-menu-item" href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+   	  		<ul id="sub-menu">
+            	<li><a href="#">Art</a></li>
+                <li><a href="#">Documentery</a></li>
+                <li><a href="#">Editorial</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Portrait</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Wedding</a></li>
+            </ul>
+        <li><a href="#">Biography</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+    <footer>
+    	<ul id="social-media">
+        	<li><a href="https://www.facebook.com" target="_blank">
+            <img src="images/social-media/Facebook-icon.png">
+            </a></li>
+            <li><a href="https://www.facebook.com" target="_blank">
+            <img src="images/social-media/Flickr-2-icon.png">
+            </a></li>
+            <li><a href="https://www.facebook.com" target="_blank">
+            <img src="images/social-media/Myspace-icon.png">
+            </a></li>
+            <li><a href="https://www.facebook.com" target="_blank">
+            <img src="images/social-media/Picasa-icon.png">
+            </a></li>
+            <li><a href="https://www.facebook.com" target="_blank">
+            <img src="images/social-media/Twitter-icon.png">
+            </a></li>
+            <li><a href="https://www.facebook.com" target="_blank">
+            <img src="images/social-media/Youtube-icon.png">
+            </a></li>
+        </ul>
+        <div id="copyright">
+        	<div style="float:left">
+            	©Designed By<br/>
+            	Flower & Butterfly Designers<br/>
+            	shashiudyani@gmail.com<br/>
+            </div>
+        	<div id="logo-flower-butterfly">
+            	<a href="http://www.flower-and-butterfly.com">
+                	<img order="5" src="images/site/FlowerAndButterfly/Wings.png">
+                    <img order="4" src="images/site/FlowerAndButterfly/Body.png">
+                    <img order="3" src="images/site/FlowerAndButterfly/Flower.png">
+                    <img order="2" src="images/site/FlowerAndButterfly/Stem.png">
+                    <img order="1" src="images/site/FlowerAndButterfly/Leaf.png">
+                </a>
+            </div>
+        </div>
+    </footer>
+</aside>
+
+<aside id="main-content">
+	<div id="inner-content">
+    	<h2>Home</h2>
+        <ul class="gallery clearfix">
+          <li><a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery2]" title="How is the description on that one? How is the description on that one? How is the description on that one? "><img src="images/thumbnails/t_3.jpg" alt="This is a pretty long title" /></a></li>
+          <li><a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery2]" title="Description on a single line."><img src="images/thumbnails/t_4.jpg" alt="" /></a></li>
+          <li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_5.jpg" alt="" /></a></li>
+          <li><a href="images/fullscreen/1.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_1.jpg" alt="" /></a></li>
+          <li><a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_2.jpg" alt="" /></a></li>
+        </ul>
+    </div>
+    <button id="close-button" value="X">X</button>
+</aside>
+
+<script>
+(function(a){function d(b){var c=b||window.event,d=[].slice.call(arguments,1),e=0,f=!0,g=0,h=0;return b=a.event.fix(c),b.type="mousewheel",c.wheelDelta&&(e=c.wheelDelta/120),c.detail&&(e=-c.detail/3),h=e,c.axis!==undefined&&c.axis===c.HORIZONTAL_AXIS&&(h=0,g=-1*e),c.wheelDeltaY!==undefined&&(h=c.wheelDeltaY/120),c.wheelDeltaX!==undefined&&(g=-1*c.wheelDeltaX/120),d.unshift(b,e,g,h),(a.event.dispatch||a.event.handle).apply(this,d)}var b=["DOMMouseScroll","mousewheel"];if(a.event.fixHooks)for(var c=b.length;c;)a.event.fixHooks[b[--c]]=a.event.mouseHooks;a.event.special.mousewheel={setup:function(){if(this.addEventListener)for(var a=b.length;a;)this.addEventListener(b[--a],d,!1);else this.onmousewheel=d},teardown:function(){if(this.removeEventListener)for(var a=b.length;a;)this.removeEventListener(b[--a],d,!1);else this.onmousewheel=null}},a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})})(jQuery)
+$(function() {
+$("html, body").mousewheel(function(e, delta) {
+    $('html, body').stop().animate({scrollLeft: '-='+(150*delta)+'px' }, 200);
+    e.preventDefault();
+}); });
+
+$(function(){
+	$('#logo-flower-butterfly img').fadeOut(4000);
+	setInterval(function()
+	{
+		$('#logo-flower-butterfly img').hide();
+		$('#logo-flower-butterfly img').each(function(){
+			if($(this).attr("order") == '1')
+			{
+				$(this).fadeIn(500);
+			}
+			else if($(this).attr("order") == '2')
+			{
+				$(this).fadeIn(1500);
+			}
+			else if($(this).attr("order") == '3')
+			{
+				$(this).fadeIn(2000);
+			}
+			else if($(this).attr("order") == '4')
+			{
+				$(this).fadeIn(3000);
+			}
+			else if($(this).attr("order") == '5')
+			{
+				$(this).fadeIn(3500);
+			}
+		});
+	},4000);
+	
+	$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+	$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
+	$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+
+	$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+		changepicturecallback: function(){ initialize(); }
+	});
+
+	$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+		changepicturecallback: function(){ _bsap.exec(); }
+	});
+});
+
+$(function(){	
+	if($.browser.msie){
+		$('#image-scroller img').height($(window).height()-25);
+	}
+	/*$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase()); 
+
+	if($.browser.chrome){
+		$('#image-scroller img').height($(window).height()-25);
+	}*/
+	else{
+		$('#image-scroller img').height($(window).height()-5);
+	}
+	
+	var totalWidths = 0;
+		
+	$('#image-scroller img').each(function(){
+		totalWidths += $(this).width();
+	});
+	
+	if(totalWidths != 0)
+	{
+		$("#image-scroller").width(totalWidths + 25);
+	}
+});
+
+$(window).resize(function() {
+	$('#left-content').css("min-height",$(window).height() - 20).height($(window).height() - 5);
+	$('#main-content').css("min-height",$(window).height() - 150).height($(window).height() - 120);
+	
+	$('#main-content').width($(window).width() - 360);
+	$('#inner-content').css("width",$('#main-content').width() - 60);	
+	
+	if($('#left-content').height() < 600)
+	{
+		$('#main-menu li').css("float","left");
+		$('#main-content').css("overflow","scroll");
+	}
+	else
+	{
+		$('#main-menu li').css("float","none");
+		$('#main-content').css("overflow","hidden");
+	}
+	
+	if($.browser.msie){
+		$('#image-scroller img').height($(window).height()-25);
+	}
+	else{
+		$('#image-scroller img').height($(window).height()-5);
+	}
+	
+	var totalWidths = 0;
+		
+	$('#image-scroller img').each(function(){
+		totalWidths += $(this).width();
+	});
+	
+	if(totalWidths != 0)
+	{
+		$("#image-scroller").width(totalWidths + 25);
+	}
+});
+
+$('#close-button').click(function() {
+	$('#main-content').fadeOut('slow');
+	$('#main-menu a').removeClass('selected-menu-item');
+});
+
+$('#main-menu a:not([href*=http])').click(function() {
+	$('#main-content #inner-content').hide();
+	$('#main-content').fadeOut(0);
+	$('#main-content').fadeIn(1000);
+	
+  	$('#main-menu a').removeClass('selected-menu-item');
+  	$(this).addClass('selected-menu-item');
+	
+	$('#main-content #inner-content').load('all.html div#' + $(this).text().split(" ").join(""));
+	
+	$('#main-content #inner-content').show('slow');
+	/*.animate({
+		width: "95%",
+		opacity: 1,
+		marginLeft: "0px",
+		fontSize: "3em",
+		borderWidth: "10px"
+		}, 1500 );
+	});*/
+	//$('#main-content #inner-content')
+});
+</script>
+
+</body>
+</html>
